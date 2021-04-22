@@ -9,19 +9,12 @@
               var d = new Date();
               var n = d.getTime();
               var m = d.getMilliseconds();
-              var index = imageNumber[currentImageIndex]
-              document.getElementById("img").src = image+index+".jpg?time="+n+"m"+m;
-              currentImageIndex+=1
-              if(currentImageIndex == 4){
-                 currentImageIndex = 0
-              }
+              document.getElementById("img").src = image+".jpg?time="+n+"m"+m;
           }
 
           function startTimer() {
-              setInterval(displayImage, 501);
+              setInterval(displayImage, 1000);
           }
-          var currentImageIndex = 0
-          var imageNumber = ["1","2","3","4"]
           var image = "https://wegmansmaskdetection.s3.amazonaws.com/peopleWithBoundingBoxes";
       </script>
    </head>
