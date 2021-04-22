@@ -12,12 +12,12 @@
               setInterval(displayImage, 1000);
           }
 
-          var image = "s3://wegmansmaskdetection/peopleWithBoundingBoxes.jpg";
+          var image = "https://wegmansmaskdetection.s3.amazonaws.com/peopleWithBoundingBoxes.jpg";
       </script>
    </head>
 
    <body onload = "startTimer()">
-       <img id="img" src="s3://wegmansmaskdetection/peopleWithBoundingBoxes.jpg"/>
+       <img id="img" src="https://wegmansmaskdetection.s3.amazonaws.com/peopleWithBoundingBoxes.jpg"/>
        <button type="button" onclick="displayImage()">Update</button>
    </body>
 </html>
