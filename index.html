@@ -5,13 +5,15 @@
       <title>Mask detection</title>
       <script type = "text/javascript">
           function displayImage() {
-              document.getElementById("img").src = image;
+              var d = new Date();
+              var n = d.getTime();
+              document.getElementById("img").src = image+"?time="+n;
           }
 
           function startTimer() {
               setInterval(displayImage, 1000);
           }
-
+         
           var image = "https://wegmansmaskdetection.s3.amazonaws.com/peopleWithBoundingBoxes.jpg";
       </script>
    </head>
