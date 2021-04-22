@@ -7,7 +7,8 @@
           function displayImage() {
               var d = new Date();
               var n = d.getTime();
-              document.getElementById("img").src = image+"?time="+n;
+              var m = d.getMilliseconds();
+              document.getElementById("img").src = image+"?time="+n+"m"+m;
           }
 
           function startTimer() {
