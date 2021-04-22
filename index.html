@@ -4,18 +4,25 @@
    <head>
       <title>Mask detection</title>
       <script type = "text/javascript">
+         
           function displayImage() {
               var d = new Date();
               var n = d.getTime();
               var m = d.getMilliseconds();
-              document.getElementById("img").src = image+"?time="+n+"m"+m;
+              currentImageIndex+=1
+              var index = imageNumber[currentImageIndex]
+              if(currentImageIndex == 4){
+                 currentImageIndex = 0
+              }
+              document.getElementById("img").src = image+index+".jpg?time="+n+"m"+m;
           }
 
           function startTimer() {
-              setInterval(displayImage, 500);
+              setInterval(displayImage, 501);
           }
-         
-          var image = "https://wegmansmaskdetection.s3.amazonaws.com/peopleWithBoundingBoxes.jpg";
+          var currentImageIndex = 0
+          var imageNumber = ["1","2","3","4"]
+          var image = "https://wegmansmaskdetection.s3.amazonaws.com/peopleWithBoundingBoxes";
       </script>
    </head>
 
