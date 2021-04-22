@@ -9,12 +9,12 @@
               var d = new Date();
               var n = d.getTime();
               var m = d.getMilliseconds();
-              currentImageIndex+=1
               var index = imageNumber[currentImageIndex]
+              document.getElementById("img").src = image+index+".jpg?time="+n+"m"+m;
+              currentImageIndex+=1
               if(currentImageIndex == 4){
                  currentImageIndex = 0
               }
-              document.getElementById("img").src = image+index+".jpg?time="+n+"m"+m;
           }
 
           function startTimer() {
